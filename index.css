@@ -1,0 +1,276 @@
+/* ==== GLOBAL LAYOUT ==== */
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, Arial;
+  background: #f7f9fc;
+  color: #111;
+}
+
+.app-root {
+  max-width: 1200px;
+  margin: 12px auto;
+  padding: 12px;
+}
+
+/* ==== HEADER / TITLE BAR ==== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+  color: #0b3d91;
+  font-weight: 700;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ==== SEARCH BAR ==== */
+.searchbar {
+  position: relative;
+  width: 360px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.predictions-list {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 6px;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.predictions-list li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.predictions-list li:hover {
+  background: #f0f0f0;
+}
+
+/* ==== FILTERS ==== */
+.filter-area {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.type-select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* ==== MAP SECTION ==== */
+.map-wrapper {
+  box-shadow: 0 4px 10px rgba(20, 30, 60, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-loading,
+.map-error {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.main {
+  margin-top: 12px;
+}
+
+/* ==== FOOTER ==== */
+.footer {
+  margin-top: 8px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* ==== ERROR BOX ==== */
+.error {
+  background: #ffe8e8;
+  color: #900;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border: 1px solid #f5b5b5;
+}
+
+/* ==== LOGIN PAGE ==== */
+.login-container {
+  max-width: 350px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 12px;
+  color: #0b3d91;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  padding: 10px;
+  background: #0b3d91;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background: #093579;
+}
+
+.login-hint {
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 8px;
+}
+
+/* ==== LOGOUT BUTTON ==== */
+.logout-btn {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #d62828;
+}
+
+/* ==== DARK MODE ==== */
+body.dark {
+  background: #0b132b;
+  color: #f1f1f1;
+}
+
+.dark .header {
+  background: #1c2541;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.dark .title {
+  color: #f8f8f8;
+}
+
+.dark .search-input,
+.dark .type-select,
+.dark .login-form input {
+  background: #2b2b2b;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark .predictions-list {
+  background: #1e1e1e;
+  border-color: #444;
+}
+
+.dark .predictions-list li:hover {
+  background: #2e2e2e;
+}
+
+.dark .filter-area label {
+  color: #f0f0f0;
+}
+
+.dark .map-wrapper {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.dark .footer {
+  color: #aaa;
+}
+
+.mode-toggle {
+  background: #14213d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.mode-toggle:hover {
+  background: #1f2b5e;
+}
+
+.dark .mode-toggle {
+  background: #f8b400;
+  color: #111;
+}
+
+.dark .mode-toggle:hover {
+  background: #f9c74f;
+}
+.dark .login-container {
+  background: #1c1c1c;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+.cluster-green {
+  background-color: rgba(0, 200, 0, 0.6) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  padding: 5px !important;
+  font-weight: bold !important;
+}
+
+.cluster-red {
+  background-color: rgba(200, 0, 0, 0.6) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  padding: 5px !important;
+  font-weight: bold !important;
+}
+
+.cluster-orange {
+  background-color: rgba(255, 165, 0, 0.6) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  padding: 5px !important;
+  font-weight: bold !important;
+}
